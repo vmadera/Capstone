@@ -87,8 +87,6 @@ def get_scatter(entered_site,slider_payload):
     bool_series=filtered_df2['Payload Mass (kg)'].between(slider_payload[0],slider_payload[1],inclusive="both")
     filtered_df2 =spacex_df [bool_series]
     if entered_site == 'ALL':
-        #filtered_df2 = spacex_df
-        #filtered_df2=filtered_df2[filtered_df2['Payload Mass (kg)'] < slider_payload]
         fig = px.scatter(filtered_df2, x='Payload Mass (kg)', 
         y='class', 
         color="Booster Version Category",
